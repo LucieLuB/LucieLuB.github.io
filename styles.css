@@ -1,4 +1,5 @@
-/*---------RESET CSS---------*/
+/*---------RESET CSS---------
+-----------------------------*/
 
 *, *::before, *::after{
     margin: 0;
@@ -16,7 +17,8 @@ li { list-style-type: none ; }
 
 a { text-decoration: none; }
 
-/*---------FONTS---------*/
+/*---------FONTS---------
+-------------------------*/
 
 :root {
     --playfair: 'Playfair Display';
@@ -25,27 +27,61 @@ a { text-decoration: none; }
     --poppins: 'Poppins', sans-serif;
 }
 
-/*---------COLORS---------*/
+/*---------COLORS---------
+--------------------------*/
 :root {
 --yellow : #ffc637;
 }
 
-/*---------BODY---------*/
+/*---------BODY---------
+------------------------*/
 
-body {
-    background-image: url('./assets/images/backgroundImage1.png');
-    background-size: auto;
-    background-repeat: no-repeat;
-    background-position: top right;
-    font-family: var(--poppins);
+
+
+/*----------MAIN / GENERAL STYLES-----------
+---------------------------*/
+.point {
+    color: var(--yellow);
 }
 
-/*---------HEADER---------*/
+.divPoints {
+    font-size: 40px;
+    letter-spacing: 30;
+    color: var(--yellow); 
+    margin: 40px 0;   
+}
+
+
+
+main {
+    padding: 20px 40px;
+    text-align: center;
+    
+}
+
+p {
+    line-height: 1.7;
+}
+
+h2 {
+    font-family: var(--poppins);
+    font-size: 45px;
+    padding: 20px;
+    text-align: center;  
+}
+
+/*---------HEADER---------
+--------------------------*/
+
+header {
+    background-color: var(--yellow);
+}
 
 h1 {
     text-align: center;
     padding: 10px ;
     margin-left: 20px;
+   
 }
 
 nav { text-align: center; }
@@ -64,21 +100,23 @@ header a {
 
 header a:hover { color: white; }
 
-/*---------PRESENTATION SECTION---------*/
+/*---------PRESENTATION SECTION---------
+----------------------------------------*/
 
-h2 {
-    font-family: var(--playfair);
-    font-size: 40px;
-    padding: 20px;
-    text-align: center;
+
+h2:not(.h2Presentation) {
+    margin-top: 40px;
+}
+
+.h2Presentation  { font-family: var(--playfair);
 }
 
 .presentation p {
     font-family: var(--comforta);
-    padding-bottom: 20px;
+    padding-bottom: 30px;
     padding-left: 20px;
-    text-align: center;
     line-height: 1.5;
+    
     font-size: 18px;
 }
 
@@ -109,11 +147,137 @@ h2 {
     font-weight: 600;
 }
 
+/*---------ABOUT ME SECTION---------
+----------------------------------------*/
+/*.about {
+    background-image: url('./assets/images/backgroundImage3.svg');
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+}*/
 
-@media (min-width:768px) {
+/*--------- WHAT CAN I DO SECTION / PROJECTS SECTION---------
+----------------------------------------*/
+.iDoItems, .projectsItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    box-shadow: 10px 10px 10px 0px rgb(255,198,55, 0.3);
+    padding: 20px;
+}
+
+.iDoItems h3, .projectsItems h3 {
+    font-size: 25px;
+    
+}
+
+/*--------- PROYECTS SECTION---------
+----------------------------------------*/
+
+.btnProjects {
+    padding: 15px;
+    margin: 20px;
+    background-color: white;
+    border-radius: 30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.btnProjects:hover {
+    background-color: var(--yellow);
+    border: none;
+    
+}
+
+.pointsLine {
+    font-size: 40px;
+    letter-spacing: 10;
+    padding-left: 20px;
+    color: var(--yellow);
+}
+
+.btnViewMore {
+    background-color: var(--yellow);
+    border: none;
+    padding: 15px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 50px;
+    
+}
+
+.btnViewMore:hover {
+    background-color: white;
+    border: 1px solid black;
+}
+
+
+/*--------- SKILLS & TOOLS SECTION---------
+----------------------------------------*/
+.skills {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 10px;
+}
+
+.skills figure {
+    background-color: black;
+    max-width: 100%;
+    height: auto;
+    padding: 15px;
+    color: white;
+}
+
+.skills figure:hover {
+    background-color: var(--yellow);
+}
+
+figcaption {
+    padding-top: 10px;
+    font-size: 10px;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 576px) {
+    body { /*CLEAR CODE BACKGROUND TOGETHER*/
+        background-image: url('./assets/images/backgroundImage2.svg');
+            /*background-image: url('./assets/images/backgroundImage1.png');*/
+            background-size: 100% auto;
+            background-repeat: no-repeat;
+            background-position: top right;
+            font-family: var(--poppins);
+        }
+}
+
+@media (min-width:576px){
+    body { /*CLEAR CODE BACKGROUND TOGETHER*/
+       background-image: url('./assets/images/backgroundImage2.svg');
+       background-repeat: no-repeat;
+       background-position: top right;
+        }
+}
+
+
+
+
+
+
+
+
+
+
+/*
+@media (min-width:768px) { */
 
     /*---------HEADER---------*/
-    
+    /*
     header {
         display: flex;
         justify-content: space-between;
@@ -130,13 +294,16 @@ h2 {
         margin-left: 0;
         padding: 0;
     }
-    
+    */
     /*---------MAIN---------*/
     
-    main { padding: 0 90px; }
+   /* main { padding: 0 90px; }*/
+
+   
     
     /*---------PRESENTATION SECTION---------*/
-    .presentation { width: 60%; }
+    
+    /* .presentation { width: 60%; }
     
     h2 {
         padding: 0;
@@ -169,7 +336,7 @@ h2 {
         }
     }
 
-
+    */
 
 
 
