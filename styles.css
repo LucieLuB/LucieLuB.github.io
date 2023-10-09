@@ -10,12 +10,18 @@
 img, iframe, figure {
     max-width: 100%;
     width: 100%;
+    height: auto;
     display: block;
 }
 
+
+
 li { list-style-type: none ; }
 
-a { text-decoration: none; }
+a { 
+    text-decoration: none;
+    
+}
 
 /*---------FONTS---------
 -------------------------*/
@@ -59,6 +65,12 @@ main {
     
 }
 
+button {
+    color: black;
+}
+
+
+
 p {
     line-height: 1.7;
 }
@@ -69,6 +81,27 @@ h2 {
     padding: 20px;
     text-align: center;  
 }
+
+
+div {
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+  
+  @keyframes slidein {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+  
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+  }
+  
+    
+
 
 /*---------HEADER---------
 --------------------------*/
@@ -104,6 +137,7 @@ header a:hover { color: white; }
 ----------------------------------------*/
 
 
+
 h2:not(.h2Presentation) {
     margin-top: 40px;
 }
@@ -124,7 +158,7 @@ h2:not(.h2Presentation) {
 
 .btnCv {
     background-color: var(--yellow);
-    border: none;
+    
     border-radius: 10px;
     padding: 10px 20px;
     margin-right: 10px;
@@ -179,6 +213,7 @@ h2:not(.h2Presentation) {
     padding: 15px;
     margin: 20px;
     background-color: white;
+    border: 1px solid black;
     border-radius: 30px;
     font-size: 20px;
     font-weight: bold;
@@ -217,7 +252,7 @@ h2:not(.h2Presentation) {
 ----------------------------------------*/
 .skills {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 10px;
 }
 
@@ -238,17 +273,85 @@ figcaption {
     font-size: 10px;
 }
 
+/*---------FOOTER---------
+--------------------------*/
+.footer {
+    background-color: var(--yellow);
+    padding: 30px;
+}
+
+.footer h3 {
+    font-size: 30px;
+}
+
+form {
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 20px;
+}
+
+hr {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 2px solid black;
+}
+
+i {
+    margin-right: 30px;
+    font-size: 25px;
+}
+
+.footer i {
+    margin-bottom: 30px;
+}
+
+.footer a {
+    color: black;
+}
+
+.footer a:hover {
+    color: white;
+}
+
+.redes i{
+    background-color: white;
+    padding: 8px;
+    border-radius: 10px;
+
+}
+
+.redes i:hover {
+    font-size: 30px;
+}
+
+input, textarea {
+    padding: 20px;
+    width: 100%;
+    margin-top: 20px;
+}
+
+form button {
+    margin-top: 20px;
+    width: 100%;
+    padding: 20px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+}
 
 
 
 
-
-
+/*CLEAR CODE BACKGROUND TOGETHER*/
 
 @media (max-width: 576px) {
-    body { /*CLEAR CODE BACKGROUND TOGETHER*/
+    
+    body { 
         background-image: url('./assets/images/backgroundImage2.svg');
-            /*background-image: url('./assets/images/backgroundImage1.png');*/
+           
             background-size: 100% auto;
             background-repeat: no-repeat;
             background-position: top right;
@@ -257,7 +360,7 @@ figcaption {
 }
 
 @media (min-width:576px){
-    body { /*CLEAR CODE BACKGROUND TOGETHER*/
+    body { 
        background-image: url('./assets/images/backgroundImage2.svg');
        background-repeat: no-repeat;
        background-position: top right;
